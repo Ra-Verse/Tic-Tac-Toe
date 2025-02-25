@@ -1,0 +1,125 @@
+/* Body styling */
+body {
+    background-image: url('picture.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container styling */
+#container {
+    font-family: "Cursive", sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #000000, #2d2d2d);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 50px auto;
+    color: #ffffff;
+}
+
+/* Board styling */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
+    width: 322px;
+    margin: 20px auto;
+    background: #444444;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Cell styling */
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #d32f2f;
+    line-height: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 75px;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #252525;
+    border-radius: 8px;
+    transition: all 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect for cells */
+.cell:hover {
+    background-color: #d32f2f;
+    color: #000000;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px #ff5252, inset 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Message styling */
+#message {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ffffff;
+    text-shadow: 0px 2px 5px rgba(255, 0, 0, 0.7);
+    transition: color 0.3s ease;
+}
+
+/* Restart button */
+#restart {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    background: #d32f2f;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.6);
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+#restart:hover {
+    background: #ff5252;
+    color: #000000;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px #ff5252, inset 0px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Board animations */
+#board {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Winning cell pop-out effect */
+.cell.winning {
+    animation: pop 0.3s ease-out alternate 2;
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+    100% {
+        transform: scale(1.2);
+        box-shadow: 0 0 10px #ff5252, 0 0 20px #ff5252;
+    }
+}
