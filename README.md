@@ -14,8 +14,7 @@ This is a basic Tic-Tac-Toe game implemented using pure JavaScript, HTML, and CS
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [repository URL]
-    cd [repository directory]
+    git clone https://github.com/Ra-Verse/Tic-Tac-Toe
     ```
 2.  **Open `index.html`:**
     Open the `index.html` file in your web browser.
